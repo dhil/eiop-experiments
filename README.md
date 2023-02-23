@@ -13,7 +13,7 @@ $ echo "deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" | sudo tee
 # Retrieve key
 $ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 # Refresh APT and install clang
-$ sudo apt update && sudo install clang-17
+$ sudo apt update && sudo apt install clang-17
 # Install libraries
 $ sudo apt install libc++1-17 libc++-17-dev libc++abi-17-dev
 ```
