@@ -8,8 +8,8 @@ effect-based I/O prefetching.
 The experiments have been run on different Ubuntu 22.04.2 LTS machines with the following special-purpose software installed.
 ```
 # Installing clang++-17 using https://apt.llvm.org/
-$ sudo echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" > /etc/apt.d/sources.list.d/llvm-apt.list
-$ sudo echo "deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" >> /etc/apt.d/sources.list.d/llvm-apt.list
+$ echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" | sudo tee /etc/apt.d/sources.list.d/llvm-apt.list
+$ echo "deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" | sudo tee -a /etc/apt.d/sources.list.d/llvm-apt.list
 # Retrieve key
 $ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 # Refresh APT and install clang
