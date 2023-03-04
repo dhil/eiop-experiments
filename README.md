@@ -12,6 +12,7 @@ $ echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" | sudo tee /et
 $ echo "deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" | sudo tee -a /etc/apt/sources.list.d/llvm-apt.list
 # Retrieve key
 $ wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+$ sudo apt-key export AF4F7421 | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/llvm-apt.gpg
 # Refresh APT and install clang
 $ sudo apt update && sudo apt install clang-17
 # Install libraries
